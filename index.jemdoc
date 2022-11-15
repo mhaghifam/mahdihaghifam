@@ -1,0 +1,38 @@
+# jemdoc: menu{MENU}{index.html}, nofooter  
+==Mahdi Haghifam 
+
+~~~
+{}{img_left}{photo/photo.jpg}{alt text}{240}{203}
+Ph.D. candidate,\n 
+[https://www.ece.utoronto.ca/ University of Toronto‬], [https://vectorinstitute.ai/ Vector Institute‬]\n
+[https://scholar.google.ca/citations?user=WADwBkkAAAAJ&hl=en \[Google Scholar\]] [https://twitter.com/HaghifamMahdi \[Twitter\]] [https://www.linkedin.com/in/mahdi-haghifam/ \[Linkedin\]] \n
+Email: mahdi dot haghifam AT mail.utoronto.ca
+~~~
+
+== About Me
+I am a final year PhD candidate at University of Toronto and a graduate student researcher at Vector Institute‬. I am honored to be advised by  [http://danroy.org/ Prof. ‪Daniel M. Roy‬]. 
+I also work closely with  [https://gkdz.org/ Dr. Gintare Karolina Dziugaite‬]. I received my B.Sc. and M.Sc. degrees in Electrical Engineering from Sharif University of Technology in 2014 and 2016 respectively.\n
+Previously, I was a research intern at [https://www.elementai.com/ Element AI‬] in Winter 2019 and Fall 2020. In early 2020, I was a visiting student at  [https://www.ias.edu/ Institute of Advanced Study‬ (IAS)]  for special-year program on Optimization, Statistics, and Theoretical Machine Learning.
+
+I am Research Intern at Google Brain and I am extremely lucky to be mentored by [http://www.thomas-steinke.net/ Dr. Thomas Steinke]  and [https://athakurta.squarespace.com/ Dr. Abhradeep Guha Thakurta‬]‪.
+\n
+{{<font color=purple size=+0.5><b>}}I am looking for postdoc and research scientist positions with the starting date of Summer 2023{{</b></font>}}
+\n
+== Research Interests
+My research focuses broadly on statistical learning theory, Differential Privacy, and Information Theory. 
+In particular, I have been working on several areas of Generalization Theory in Machine Learning  with a focus on deriving provable guarantees for Machine Learning  methods using information-theoretic tools.
+I am also interested in statistical inference and learning under privacy constraints. For a complete list of my publications, please visit the [publication.html Publications] page.
+
+== Selected Papers
+- M. Haghifam\*, B. Rodriguez-Galvez\*, R. Thobaben, M. Skoglund, D. M. Roy, G. K. Dziugaite  ``Limitations of Information-Theoretic Generalization Bounds for Gradient Descent Methods in Stochastic Convex Optimization'' \[Under Review\].
+- M. Haghifam, S. Moran, D. M. Roy, G. K. Dziugaite, ``Understanding Generalization via Leave-One-Out Conditional Mutual Information'', ISIT 2022 [https://arxiv.org/abs/2206.14800 \[paper\]].
+- M. Haghifam, G. K. Dziugaite, S. Moran,  D. M. Roy, ``Towards a Unified Information--Theoretic Framework for Generalization'', NeurIPS 2021  ({{<font color=red size=+0.5><b>}}Spotlight, <3% of submissions){{</b></font>}}
+[https://arxiv.org/pdf/2111.05275.pdf \[paper\]].
+- G. Neu, G. K. Dziugaite, M. Haghifam, D. M. Roy , ``Information-Theoretic Generalization Bounds for Stochastic Gradient Descent'', COLT 2021
+[https://arxiv.org/pdf/2102.00931.pdf \[paper\]].
+- M. Haghifam, V. Y. F. Tan,  A. Khisti, ``Sequential Classification with Empirically Observed Statistics'', IEEE Transactions on Information Theory (Volume: 67, Issue: 5, May 2021)
+[papers\seqhypt.pdf \[paper\]].
+- M. Haghifam, J. Negrea,  A. Khisti, D. M. Roy , G. K. Dziugaite, ``Sharpened Generalization Bounds based on Conditional Mutual Information and an Application to Noisy, Iterative Algorithms'', NeurIPS 2020 
+[https://arxiv.org/pdf/2004.12983.pdf \[paper\]].
+- J. Negrea\*, M. Haghifam\*, G. K. Dziugaite, A. Khisti, D. M. Roy,   ``Information-Theoretic Generalization Bounds for SGLD via Data-Dependent Estimates'', NeurIPS 2019  
+[https://arxiv.org/pdf/1911.02151.pdf \[paper\]].
