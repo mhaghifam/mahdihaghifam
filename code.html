@@ -1,1 +1,41 @@
+<h2>Code & Implementations</h2>
+<ul>
+
+<li><p>
+  <a href="https://github.com/mhaghifam/sgld-genbound-NeurIPS2020">
+    Numerical Study of Information-Theoretic Generalization Bounds (NeurIPS 2019/2020)
+  </a>
+  <br />
+  Lightweight PyTorch simulation framework that tracks empirical generalization during noisy-SGD/SGLD training and compares multiple bound estimators (including CMI) across vision benchmarks.
+  Includes main scripts per dataset (MNIST / Fashion-MNIST / CIFAR-10) plus modular bound implementations for easy extension.
+</p></li>
+
+<li><p>
+  <a href="https://github.com/mhaghifam/Private-Geometric-Median-NeurIPS2024">
+    Private Geometric Median (NeurIPS 2024)
+  </a>
+  <br />
+  Official implementation of differentially private algorithms for computing the geometric median.
+  Focuses on practical DP estimators whose accuracy scales with the *effective* data diameter (not a hand-tuned radius), plus scripts to reproduce experiments.
+</p></li>
+
+<li><p>
+  <a href="https://github.com/mhaghifam/Second-Order-Private-Optimization-NeurIPS2023">
+    Second-Order Private Optimization (NeurIPS 2023)
+  </a>
+  <br />
+  Implements Double-Noise DP Newton-style methods for convex ERM (e.g., logistic regression).
+  Uses curvature to take larger, better-scaled steps and reach strong privacy/utility tradeoffs in far fewer iterations than DP-GD baselines.
+</p></li>
+
+<li><p>
+  <a href="https://github.com/mhaghifam/membership-inference-DP">
+    Membership Inference Attacks × Differentially Private Training (Tutorial)
+  </a>
+  <br />
+  Hands-on notebook showing how overfitting enables membership inference, and how DP-SGD mitigates leakage.
+  End-to-end walkthrough on MedMNIST: train → attack → DP train → re-attack → compare privacy/utility.
+</p></li>
+
+</ul>
 
