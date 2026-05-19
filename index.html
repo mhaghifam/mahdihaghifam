@@ -2,25 +2,66 @@
   "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 
 <style>
-  /* Talk video links */
-  a.talk-link:link, a.talk-link:visited {
-    color: #1b7f3a;           /* green */
+  /* ===== Clean pill buttons for paper links ===== */
+  .pub-links {
+    margin-top: 0.35rem;
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    vertical-align: middle;
+  }
+  .link-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-family: ui-monospace, "SF Mono", Consolas, monospace;
+    font-size: 0.78rem;
     font-weight: 600;
+    letter-spacing: 0.02em;
+    padding: 0.22rem 0.6rem;
+    border-radius: 999px;
+    text-decoration: none;
+    border: 1px solid #d6d1c2;
+    background: #ffffff;
+    color: #555a63;
+    transition: all 0.18s ease;
+    line-height: 1.2;
+  }
+  .link-pill i { font-size: 0.82rem; }
+  .link-pill:hover {
+    transform: translateY(-1px);
     text-decoration: none;
   }
-  a.talk-link:hover, a.talk-link:active {
-    text-decoration: underline;
+  .link-pill.paper:hover { color: #234a7a; border-color: #234a7a; }
+  .link-pill.talk:hover  { color: #1b7f3a; border-color: #1b7f3a; }
+  .link-pill.code:hover  { color: #b45309; border-color: #b45309; }
+
+  /* ===== Publication list ===== */
+  ul.pub-list {
+    padding-left: 1.4rem;   /* keeps bullets inside the content column */
+    margin-top: 0.5rem;
+  }
+  ul.pub-list > li {
+    margin-bottom: 0.6rem;
+  }
+  ul.pub-list > li > p {
+    margin: 0.2rem 0;
   }
 
-  /* Code links */
-  a.code-link:link, a.code-link:visited {
-    color: #b45309;           /* orange */
+  /* Legacy classes kept in case other pages still use them */
+  a.talk-link:link, a.talk-link:visited {
+    color: #1b7f3a;
     font-weight: 600;
     text-decoration: none;
   }
-  a.code-link:hover, a.code-link:active {
-    text-decoration: underline;
+  a.talk-link:hover, a.talk-link:active { text-decoration: underline; }
+
+  a.code-link:link, a.code-link:visited {
+    color: #b45309;
+    font-weight: 600;
+    text-decoration: none;
   }
+  a.code-link:hover, a.code-link:active { text-decoration: underline; }
 </style>
 
 
@@ -105,45 +146,55 @@ Email: <a href="mailto:mhaghifam@ttic.edu">mhaghifam@ttic.edu</a> <br />
 
   
 <h2> Selected Papers </h2>
+<ul class="pub-list">
 <li><p><a href="#">The Distillation Game in LLMs: Adaptive Attacks &amp; Efficient Defenses</a>
 <br /> <b>M. Haghifam*</b>, Y. Allouah*, R. Shokri, S. Koyejo
-<br /> Submitted, 2026 (Preliminary version accepted at ICML 2026 Workshop on Impact of Memorization on Trustworthy Foundation Models)
+<br /> Submitted, 2026
+<br /> <font color="blue"><b>(Preliminary version accepted at ICML 2026 Workshop on Impact of Memorization on Trustworthy Foundation Models)</b></font>
 </p></li>
 
 <li><p><a href="https://arxiv.org/abs/2605.17609">Adaptive Generate-and-Verify: Inference-Time Search with Costly Verification</a>
-<br /> S. Dughmi, <b>M. Haghifam</b>, Y.H. Kalayci <img class="eq" src="eqs/1237943278-130.png" alt="(alphabeta)" style="vertical-align: -5px" />
+<br /> S. Dughmi, <b>M. Haghifam</b>, Y.H. Kalayci (alphabetic ordering)
 <br /> Submitted, 2026
 </p></li>  
 
 <li><p><a href="https://arxiv.org/abs/2508.19458">The Sample Complexity of Membership Inference and Privacy Auditing</a>
-<br /> <b>M. Haghifam</b>, A. Smith, J. Ullman <img class="eq" src="eqs/1237943278-130.png" alt="(alphabeta)" style="vertical-align: -5px" />
-<br /> Pre-print, 2025
+<br /> <b>M. Haghifam</b>, A. Smith, J. Ullman 
+<br /> Submitted, 2026
 </p></li>
 
-<li><p><a href="https://arxiv.org/abs/2402.09327">Information Complexity of Stochastic Convex Optimization: Applications to Generalization and Memorization</a> |&nbsp;
-<a class="talk-link" href="https://icml.cc/virtual/2024/oral/35552">[Talk video at ICML'24]</a>
+<li><p><a href="https://arxiv.org/abs/2402.09327">Information Complexity of Stochastic Convex Optimization: Applications to Generalization and Memorization</a>
 <br /> I. Attias, G. K. Dziugaite, <b>M. Haghifam</b>, R. Livni, D. M. Roy (alphabetic ordering)
 <br /> International Conference on Machine Learning (ICML), 2024 <font color="blue"><b>(Oral, Best Paper Award: Top 10 of 10,000 submissions)</b></font>
+<br /> <span class="pub-links">
+  <a class="link-pill talk" href="https://icml.cc/virtual/2024/oral/35552"><i class="fas fa-circle-play"></i> Talk</a>
+</span>
 </p></li>
 
-<li><p><a href="https://arxiv.org/abs/2406.07407">Private Geometric Median</a> |&nbsp;
-<a class="talk-link" href="https://slideslive.com/39027871/private-geometric-median?ref=search-presentations">[Talk video]</a> |&nbsp;
-<a class="code-link" href="https://github.com/mhaghifam/Private-Geometric-Median-NeurIPS2024">[Code]</a>
+<li><p><a href="https://arxiv.org/abs/2406.07407">Private Geometric Median</a>
 <br /> <b>M. Haghifam</b>, T. Steinke, J. Ullman
 <br /> Advances in Neural Information Processing Systems (NeurIPS), 2024
+<br /> <span class="pub-links">
+  <a class="link-pill talk" href="https://slideslive.com/39027871/private-geometric-median?ref=search-presentations"><i class="fas fa-circle-play"></i> Talk</a>
+  <a class="link-pill code" href="https://github.com/mhaghifam/Private-Geometric-Median-NeurIPS2024"><i class="fab fa-github"></i> Code</a>
+</span>
 </p></li>
 
-<li><p><a href="https://arxiv.org/abs/2305.13209">Faster Differentially Private Convex Optimization via Second-Order Methods</a> |&nbsp;
-<a class="code-link" href="https://github.com/mhaghifam/Second-Order-Private-Optimization-NeurIPS2023">[Code]</a>
+<li><p><a href="https://arxiv.org/abs/2305.13209">Faster Differentially Private Convex Optimization via Second-Order Methods</a>
 <br /> A. Ganesh, <b>M. Haghifam</b>, T. Steinke, A. Thakurta (alphabetic ordering)
 <br /> Advances in Neural Information Processing Systems (NeurIPS), 2023
+<br /> <span class="pub-links">
+  <a class="link-pill code" href="https://github.com/mhaghifam/Second-Order-Private-Optimization-NeurIPS2023"><i class="fab fa-github"></i> Code</a>
+</span>
 </p></li>
 
-<li><p><a href="https://arxiv.org/abs/2004.12983">Sharpened Generalization Bounds based on Conditional Mutual Information and an Application to Noisy, Iterative Algorithms</a> |&nbsp;
-<a class="talk-link" href="https://slideslive.com/38936040/sharpened-generalization-bounds-based-on-conditional-mutual-information-and-an-application-to-noisy-iterative-algorithms?ref=search-presentations">[Talk video]</a> |&nbsp;
-<a class="code-link" href="https://github.com/mhaghifam/sgld-genbound-NeurIPS2019-and-2020">[Code]</a>
+<li><p><a href="https://arxiv.org/abs/2004.12983">Sharpened Generalization Bounds based on Conditional Mutual Information and an Application to Noisy, Iterative Algorithms</a>
 <br /> <b>M. Haghifam</b>, J. Negrea, A. Khisti, D. M. Roy, G. K. Dziugaite
 <br /> Advances in Neural Information Processing Systems (NeurIPS), 2020
+<br /> <span class="pub-links">
+  <a class="link-pill talk" href="https://slideslive.com/38936040/sharpened-generalization-bounds-based-on-conditional-mutual-information-and-an-application-to-noisy-iterative-algorithms?ref=search-presentations"><i class="fas fa-circle-play"></i> Talk</a>
+  <a class="link-pill code" href="https://github.com/mhaghifam/sgld-genbound-NeurIPS2019-and-2020"><i class="fab fa-github"></i> Code</a>
+</span>
 </p></li>
 </ul>
 
@@ -182,73 +233,3 @@ Mentor: <a href="https://gkdz.org/">Gintare Karolina Dziugaite</a><br>
 </table>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
