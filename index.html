@@ -1,6 +1,12 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
   "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="stylesheet" href="jemdoc.css" type="text/css" />
+<title>Mahdi Haghifam </title>
 <style>
   /* ===== Clean pill buttons for paper links ===== */
   .pub-links {
@@ -36,6 +42,26 @@
   .link-pill.talk:hover  { color: #1b7f3a; border-color: #1b7f3a; }
   .link-pill.code:hover  { color: #b45309; border-color: #b45309; }
 
+  /* ===== Summary Button and Dropdown ===== */
+  button.link-pill {
+    cursor: pointer;
+  }
+  button.link-pill.summary-btn:hover { 
+    color: #4b5563; 
+    border-color: #4b5563; 
+  }
+  .paper-summary {
+    display: none; /* Hidden by default */
+    margin-top: 0.6rem;
+    padding: 0.6rem 0.8rem;
+    background-color: #f8f9fa;
+    border-left: 3px solid #d6d1c2;
+    font-size: 0.9rem;
+    color: #444;
+    line-height: 1.4;
+    border-radius: 0 4px 4px 0;
+  }
+
   /* ===== Publication list ===== */
   ul.pub-list {
     padding-left: 1.4rem;   /* keeps bullets inside the content column */
@@ -62,39 +88,29 @@
     text-decoration: none;
   }
   a.code-link:hover, a.code-link:active { text-decoration: underline; }
+
+  /* Social Media Icons Styling */
+  .social-icons {
+      margin-top: 15px;
+      margin-bottom: 20px;
+  }
+  .social-icons a {
+      text-decoration: none;
+      margin-right: 20px; /* Space between icons */
+      color: #333;        /* Default icon color (dark gray) */
+      transition: color 0.3s ease;
+  }
+  .social-icons i {
+      font-size: 2em;      /* Icon size - increase this number to make them bigger */
+  }
+
+  /* Specific Colors on Hover */
+  .social-icons a:hover .fa-graduation-cap { color: #4285F4; } /* Scholar Blue */
+  .social-icons a:hover .fa-github { color: #333; }            /* GitHub Black */
+  .social-icons a:hover .fa-twitter { color: #1DA1F2; }        /* Twitter Blue */
+  .social-icons a:hover .fa-linkedin { color: #0077b5; }       /* LinkedIn Blue */
 </style>
-
-
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
-<head>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-<meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<link rel="stylesheet" href="jemdoc.css" type="text/css" />
-<title>Mahdi Haghifam </title>
 </head>
- <style>
-/* Social Media Icons Styling */
-.social-icons {
-    margin-top: 15px;
-    margin-bottom: 20px;
-}
-.social-icons a {
-    text-decoration: none;
-    margin-right: 20px; /* Space between icons */
-    color: #333;        /* Default icon color (dark gray) */
-    transition: color 0.3s ease;
-}
-.social-icons i {
-    font-size: 2em;     /* Icon size - increase this number to make them bigger */
-}
-
-/* Specific Colors on Hover */
-.social-icons a:hover .fa-graduation-cap { color: #4285F4; } /* Scholar Blue */
-.social-icons a:hover .fa-github { color: #333; }            /* GitHub Black */
-.social-icons a:hover .fa-twitter { color: #1DA1F2; }        /* Twitter Blue */
-.social-icons a:hover .fa-linkedin { color: #0077b5; }       /* LinkedIn Blue */
-</style>
 <body>
 <table summary="Table for page layout." id="tlayout">
 <tr valign="top">
@@ -146,33 +162,57 @@ Email: <a href="mailto:mhaghifam@ttic.edu">mhaghifam@ttic.edu</a> <br />
   
 <h2> Selected Papers </h2>
 <ul class="pub-list">
+
 <li><p><a href="https://arxiv.org/pdf/2605.22737">The Distillation Game in LLMs: Adaptive Attacks &amp; Efficient Defenses</a>
 <br /> Y. Allouah*, <b>M. Haghifam*</b>, R. Shokri, S. Koyejo
 <br /> Submitted, 2026
 <br /> <span class="pub-links">
   <a class="link-pill code" href="https://github.com/ysfalh/distillation-game"><i class="fab fa-github"></i> Code</a>
-</span></p></li>
+  <button class="link-pill summary-btn" onclick="toggleSummary('sum-distillation')"><i class="fas fa-align-left"></i> Summary</button>
+</span>
+</p>
+<div id="sum-distillation" class="paper-summary">
+  Framing model extraction as a strategic game, this work develops inference-time safeguards against knowledge distillation. The results show that adaptive defenses can protect proprietary LLMs from being stolen without sacrificing generation quality.
+</div>
+</li>
 
 <li><p><a href="https://arxiv.org/abs/2605.17609">Adaptive Generate-and-Verify: Inference-Time Search with Costly Verification</a>
 <br /> S. Dughmi, <b>M. Haghifam</b>, Y.H. Kalayci (authors listed in alphabetic order)
 <br /> Submitted, 2026
 <br /> <span class="pub-links">
   <a class="link-pill code" href="https://github.com/yhkalayci/efficient_query"><i class="fab fa-github"></i> Code</a>
+  <button class="link-pill summary-btn" onclick="toggleSummary('sum-adap')"><i class="fas fa-align-left"></i> Summary</button>
 </span>
-</p></li>  
+</p>
+<div id="sum-adap" class="paper-summary">
+  This paper explores how to manage test-time compute when verifying search results is expensive. The proposed ADAP algorithm guarantees a multiplicative cost bound against an oracle, meaning simple prompts use very little compute while resources naturally scale up for harder problems.
+</div>
+</li>  
 
 <li><p><a href="https://arxiv.org/abs/2508.19458">The Sample Complexity of Membership Inference and Privacy Auditing</a>
 <br /> <b>M. Haghifam</b>, A. Smith, J. Ullman 
 <br /> Submitted, 2026
-</p></li>
+<br /> <span class="pub-links">
+  <button class="link-pill summary-btn" onclick="toggleSummary('sum-membership')"><i class="fas fa-align-left"></i> Summary</button>
+</span>
+</p>
+<div id="sum-membership" class="paper-summary">
+  This work analyzes exactly how many samples an attacker needs to pull off membership inference in settings like Gaussian mean estimation. It shows that standard empirical attacks using O(n) samples actually underestimate privacy risks, because attackers need far more reference samples to match a fully informed adversary.
+</div>
+</li>
 
 <li><p><a href="https://arxiv.org/abs/2402.09327">Information Complexity of Stochastic Convex Optimization: Applications to Generalization and Memorization</a>
 <br /> I. Attias, G. K. Dziugaite, <b>M. Haghifam</b>, R. Livni, D. M. Roy (authors listed in alphabetic order)
 <br /> International Conference on Machine Learning (ICML), 2024 <font color="blue"><b>(Oral, Best Paper Award: Top 10 of 10,000 submissions)</b></font>
 <br /> <span class="pub-links">
   <a class="link-pill talk" href="https://icml.cc/virtual/2024/oral/35552"><i class="fas fa-circle-play"></i> Talk</a>
+  <button class="link-pill summary-btn" onclick="toggleSummary('sum-complexity')"><i class="fas fa-align-left"></i> Summary</button>
 </span>
-</p></li>
+</p>
+<div id="sum-complexity" class="paper-summary">
+  This paper highlights a strict trade-off between learning accuracy and the information that a learning algorithm uses from the training set to generate output. It proves that achieving a small excess error inherently forces the model to reveal massive amounts of this information, creating a direct theoretical connection to a model's vulnerability against membership inference attacks.
+</div>
+</li>
 
 <li><p><a href="https://arxiv.org/abs/2406.07407">Private Geometric Median</a>
 <br /> <b>M. Haghifam</b>, T. Steinke, J. Ullman
@@ -180,16 +220,26 @@ Email: <a href="mailto:mhaghifam@ttic.edu">mhaghifam@ttic.edu</a> <br />
 <br /> <span class="pub-links">
   <a class="link-pill talk" href="https://slideslive.com/39027871/private-geometric-median?ref=search-presentations"><i class="fas fa-circle-play"></i> Talk</a>
   <a class="link-pill code" href="https://github.com/mhaghifam/Private-Geometric-Median-NeurIPS2024"><i class="fab fa-github"></i> Code</a>
+  <button class="link-pill summary-btn" onclick="toggleSummary('sum-median')"><i class="fas fa-align-left"></i> Summary</button>
 </span>
-</p></li>
+</p>
+<div id="sum-median" class="paper-summary">
+  This paper tackles the challenge of designing differentially private estimators that automatically adapt to the underlying geometry of the data. By focusing on adaptivity, the method provides a robust way to compute the geometric median in high dimensions without needing prior knowledge about the data's scale or spread.
+</div>
+</li>
 
 <li><p><a href="https://arxiv.org/abs/2305.13209">Faster Differentially Private Convex Optimization via Second-Order Methods</a>
 <br /> A. Ganesh, <b>M. Haghifam</b>, T. Steinke, A. Thakurta (authors listed in alphabetic order)
 <br /> Advances in Neural Information Processing Systems (NeurIPS), 2023
 <br /> <span class="pub-links">
   <a class="link-pill code" href="https://github.com/mhaghifam/Second-Order-Private-Optimization-NeurIPS2023"><i class="fab fa-github"></i> Code</a>
+  <button class="link-pill summary-btn" onclick="toggleSummary('sum-secondorder')"><i class="fas fa-align-left"></i> Summary</button>
 </span>
-</p></li>
+</p>
+<div id="sum-secondorder" class="paper-summary">
+  This work explores how second-order optimization methods can significantly speed up private machine learning. By developing a private version of the regularized cubic Newton method, the approach achieves optimal loss and runs 10 to 40 times faster in wall-clock time compared to standard baselines like DP-SGD.
+</div>
+</li>
 
 <li><p><a href="https://arxiv.org/abs/2004.12983">Sharpened Generalization Bounds based on Conditional Mutual Information and an Application to Noisy, Iterative Algorithms</a>
 <br /> <b>M. Haghifam</b>, J. Negrea, A. Khisti, D. M. Roy, G. K. Dziugaite
@@ -197,8 +247,13 @@ Email: <a href="mailto:mhaghifam@ttic.edu">mhaghifam@ttic.edu</a> <br />
 <br /> <span class="pub-links">
   <a class="link-pill talk" href="https://slideslive.com/38936040/sharpened-generalization-bounds-based-on-conditional-mutual-information-and-an-application-to-noisy-iterative-algorithms?ref=search-presentations"><i class="fas fa-circle-play"></i> Talk</a>
   <a class="link-pill code" href="https://github.com/mhaghifam/sgld-genbound-NeurIPS2019-and-2020"><i class="fab fa-github"></i> Code</a>
+  <button class="link-pill summary-btn" onclick="toggleSummary('sum-generalization')"><i class="fas fa-align-left"></i> Summary</button>
 </span>
-</p></li>
+</p>
+<div id="sum-generalization" class="paper-summary">
+  Moving past worst-case assumptions, this work offers data-dependent generalization estimates for noisy, iterative algorithms like SGLD. By using Conditional Mutual Information, it derives meaningful generalization bounds for modern machine learning setups where older theories fall short.
+</div>
+</li>
 </ul>
 
  <h2 id="work">Industry Internship Experience</h2>
@@ -255,5 +310,17 @@ Mentor: <a href="https://gkdz.org/">Gintare Karolina Dziugaite</a><br>
 </td>
 </tr>
 </table>
+
+<script>
+function toggleSummary(id) {
+    var summaryDiv = document.getElementById(id);
+    if (summaryDiv.style.display === "none" || summaryDiv.style.display === "") {
+        summaryDiv.style.display = "block";
+    } else {
+        summaryDiv.style.display = "none";
+    }
+}
+</script>
+
 </body>
 </html>
