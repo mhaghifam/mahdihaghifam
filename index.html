@@ -172,7 +172,7 @@ Email: <a href="mailto:mhaghifam@ttic.edu">mhaghifam@ttic.edu</a> <br />
 </span>
 </p>
 <div id="sum-distillation" class="paper-summary">
-  Framing model extraction as a strategic game, this work develops inference-time safeguards against knowledge distillation. The results show that adaptive defenses can protect proprietary LLMs from being stolen without sacrificing generation quality.
+  We cast defense against knowledge distillation as a minimax game between a teacher and an adaptive student. The paper has two contributions: a strategic student that serves as a principled benchmark by simulating worst-case attackers against any defense, and a Product-of-Experts decoding scheme that degrades the utility of distilled reasoning traces while preserving the teacher's own generation quality.
 </div>
 </li>
 
@@ -185,7 +185,7 @@ Email: <a href="mailto:mhaghifam@ttic.edu">mhaghifam@ttic.edu</a> <br />
 </span>
 </p>
 <div id="sum-adap" class="paper-summary">
-  This paper explores how to manage test-time compute when verifying search results is expensive. The proposed ADAP algorithm guarantees a multiplicative cost bound against an oracle, meaning simple prompts use very little compute while resources naturally scale up for harder problems.
+  We formalize inference-time generate-and-verify as active search: a sequential decision problem with a cheap reward-observation cost and an expensive verification cost. The Bayes-optimal policy reduces to a posterior-threshold rule, and the ADAP algorithm achieves a multiplicative competitive ratio against this oracle with PAC-style guarantees, spending little compute on easy prompts and scaling up adaptively on harder ones. A matching lower bound via the centered star number separates active search from active learning.
 </div>
 </li>  
 
@@ -197,7 +197,7 @@ Email: <a href="mailto:mhaghifam@ttic.edu">mhaghifam@ttic.edu</a> <br />
 </span>
 </p>
 <div id="sum-membership" class="paper-summary">
-  This work analyzes exactly how many samples an attacker needs to pull off membership inference in settings like Gaussian mean estimation. It shows that standard empirical attacks using O(n) samples actually underestimate privacy risks, because attackers need far more reference samples to match a fully informed adversary.
+  We characterize the sample complexity of membership inference in fundamental settings such as Gaussian mean estimation and classification. The main finding is that standard empirical attacks using O(n) reference samples can substantially underestimate the true privacy risk, since matching the fully-informed (Bayes-optimal) adversary requires far more reference data than the size of the training set itself.
 </div>
 </li>
 
@@ -210,7 +210,7 @@ Email: <a href="mailto:mhaghifam@ttic.edu">mhaghifam@ttic.edu</a> <br />
 </span>
 </p>
 <div id="sum-complexity" class="paper-summary">
-  This paper highlights a strict trade-off between learning accuracy and the information that a learning algorithm uses from the training set to generate output. It proves that achieving a small excess error inherently forces the model to reveal massive amounts of this information, creating a direct theoretical connection to a model's vulnerability against membership inference attacks.
+  We establish a strict tradeoff between excess loss and the conditional mutual information any algorithm extracts from its training data in stochastic convex optimization. Achieving small error necessarily requires revealing substantial information about individual samples, which yields lower bounds on memorization and a direct connection to vulnerability against membership inference attacks.
 </div>
 </li>
 
@@ -224,7 +224,7 @@ Email: <a href="mailto:mhaghifam@ttic.edu">mhaghifam@ttic.edu</a> <br />
 </span>
 </p>
 <div id="sum-median" class="paper-summary">
-  This paper tackles the challenge of designing differentially private estimators that automatically adapt to the underlying geometry of the data. By focusing on adaptivity, the method provides a robust way to compute the geometric median in high dimensions without needing prior knowledge about the data's scale or spread.
+  We design a differentially private algorithm for the geometric median whose accuracy adapts to the effective diameter of the data, with no prior bound on scale or dispersion required. The utility guarantee improves on worst-case bounds whenever the data are concentrated, and the analysis avoids restrictive distributional assumptions.
 </div>
 </li>
 
@@ -237,7 +237,7 @@ Email: <a href="mailto:mhaghifam@ttic.edu">mhaghifam@ttic.edu</a> <br />
 </span>
 </p>
 <div id="sum-secondorder" class="paper-summary">
-  This work explores how second-order optimization methods can significantly speed up private machine learning. By developing a private version of the regularized cubic Newton method, the approach achieves optimal loss and runs 10 to 40 times faster in wall-clock time compared to standard baselines like DP-SGD.
+  We show that second-order information can be used effectively under differential privacy, despite the added noise. Our algorithm, a private variant of the regularized cubic Newton method, adapts to the local shape of the loss and achieves the optimal excess loss for DP-ERM while running 10 to 40 times faster in wall-clock time than DP-SGD at comparable accuracy and privacy.
 </div>
 </li>
 
@@ -251,7 +251,7 @@ Email: <a href="mailto:mhaghifam@ttic.edu">mhaghifam@ttic.edu</a> <br />
 </span>
 </p>
 <div id="sum-generalization" class="paper-summary">
-  Moving past worst-case assumptions, this work offers data-dependent generalization estimates for noisy, iterative algorithms like SGLD. By using Conditional Mutual Information, it derives meaningful generalization bounds for modern machine learning setups where older theories fall short.
+  We give data-dependent generalization bounds for noisy iterative algorithms such as SGLD using the conditional mutual information framework. Unlike worst-case Lipschitz- or norm-based bounds, the resulting estimates depend on the algorithm's actual trajectory on the training data and remain non-vacuous in modern overparameterized settings.
 </div>
 </li>
 </ul>
