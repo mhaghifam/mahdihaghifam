@@ -185,8 +185,7 @@ Email: <a href="mailto:mhaghifam@ttic.edu">mhaghifam@ttic.edu</a> <br />
 </span>
 </p>
 <div id="sum-adap" class="paper-summary">
-  We formalize inference-time generate-and-verify as active search: a sequential decision problem with a cheap reward-observation cost and an expensive verification cost. The Bayes-optimal policy reduces to a posterior-threshold rule, and the ADAP algorithm achieves a multiplicative competitive ratio against this oracle with PAC-style guarantees, spending little compute on easy prompts and scaling up adaptively on harder ones. A matching lower bound via the centered star number separates active search from active learning.
-</div>
+  A common paradigm for inference-time compute is to generate many candidate responses, rank them with a cheap reward model, and pass the top-ranked ones to an expensive verifier. Since verification is often far more costly than generation and scoring, the policy faces a per-prompt compute allocation problem. We formalize this as active search: a sequential decision problem with a cheap reward-observation cost and an expensive verification cost. Our ADAP algorithm achieves a constant-factor competitive ratio against the distribution-aware optimum under a natural monotonicity assumption on the reward signal, and on HMMT math and LiveCodeBench coding it reaches 100% success rate at roughly 3x to 5x lower mean cost than the best fixed generate-and-verify policy. A matching lower bound via the centered star number separates active search from active learning.</div>
 </li>  
 
 <li><p><a href="https://arxiv.org/abs/2508.19458">The Sample Complexity of Membership Inference and Privacy Auditing</a>
@@ -197,7 +196,7 @@ Email: <a href="mailto:mhaghifam@ttic.edu">mhaghifam@ttic.edu</a> <br />
 </span>
 </p>
 <div id="sum-membership" class="paper-summary">
-  We characterize the sample complexity of membership inference in fundamental settings such as Gaussian mean estimation and classification. The main finding is that standard empirical attacks using O(n) reference samples can substantially underestimate the true privacy risk, since matching the fully-informed (Bayes-optimal) adversary requires far more reference data than the size of the training set itself.
+  We characterize the sample complexity of membership inference in the fundamental setting of Gaussian mean estimation. The main finding is that standard empirical attacks using O(n), where n is the number of training samples, reference samples can substantially underestimate the true privacy risk, since matching the fully-informed (Bayes-optimal) adversary requires far more reference data than the size of the training set itself, i.e., n^2.
 </div>
 </li>
 
