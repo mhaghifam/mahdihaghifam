@@ -172,8 +172,7 @@ Email: <a href="mailto:mhaghifam@ttic.edu">mhaghifam@ttic.edu</a> <br />
 </span>
 </p>
 <div id="sum-distillation" class="paper-summary">
-  We cast defense against knowledge distillation as a minimax game between a teacher and an adaptive student. The paper has two contributions: a strategic student that serves as a principled benchmark by simulating worst-case attackers against any defense, and a Product-of-Experts decoding scheme that degrades the utility of distilled reasoning traces while preserving the teacher's own generation quality.
-</div>
+  Defenses against knowledge distillation are typically evaluated against a passive student that trains uniformly on released traces, but a realistic attacker can reweight examples by their learning value. We formalize this as a minimax game between a utility-constrained teacher and an adaptive student, which yields two best-response rules: an adaptive evaluation protocol on the student side and a defense template on the teacher side. From a likelihood-ratio proxy for example value, we derive Product-of-Experts (PoE), a forward-pass-only defense that combines the teacher with a proxy student during generation. On GSM8K and MATH, adaptive evaluation reveals roughly 50% more leakage than passive evaluation against state-of-the-art defenses, and under this stronger evaluation PoE nearly matches the leakage protection of antidistillation sampling at about half the runtime overhead and with higher-quality reasoning traces.</div>
 </li>
 
 <li><p><a href="https://arxiv.org/abs/2605.17609">Adaptive Generate-and-Verify: Inference-Time Search with Costly Verification</a>
