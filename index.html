@@ -38,9 +38,10 @@
     transform: translateY(-1px);
     text-decoration: none;
   }
-  .link-pill.paper:hover { color: #234a7a; border-color: #234a7a; }
-  .link-pill.talk:hover  { color: #1b7f3a; border-color: #1b7f3a; }
-  .link-pill.code:hover  { color: #b45309; border-color: #b45309; }
+  .link-pill.paper:hover  { color: #234a7a; border-color: #234a7a; }
+  .link-pill.talk:hover   { color: #1b7f3a; border-color: #1b7f3a; }
+  .link-pill.code:hover   { color: #b45309; border-color: #b45309; }
+  .link-pill.slides:hover { color: #6b3fa0; border-color: #6b3fa0; }
 
   /* ===== Summary Button and Dropdown ===== */
   button.link-pill {
@@ -88,6 +89,13 @@
     text-decoration: none;
   }
   a.code-link:hover, a.code-link:active { text-decoration: underline; }
+
+  a.slides-link:link, a.slides-link:visited {
+    color: #6b3fa0;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  a.slides-link:hover, a.slides-link:active { text-decoration: underline; }
 
   /* Social Media Icons Styling */
   .social-icons {
@@ -167,6 +175,11 @@ includes a Research Fellowship at the <a href="https://simons.berkeley.edu/">Sim
 
   
 <h2> Selected Papers </h2>
+
+<!-- Slides pill: copy this line into any <span class="pub-links"> block and set the href.
+     <a class="link-pill slides" href="slides/PAPER-NAME.pdf"><i class="fas fa-display"></i> Slides</a>
+-->
+
 <ul class="pub-list">
 
 <li><p><a href="https://arxiv.org/pdf/2605.22737">The Distillation Game in LLMs: Adaptive Attacks &amp; Efficient Defenses</a>
@@ -185,6 +198,7 @@ includes a Research Fellowship at the <a href="https://simons.berkeley.edu/">Sim
 <br /> S. Dughmi, <b>M. Haghifam</b>, Y.H. Kalayci (authors listed in alphabetic order)
 <br /> Submitted, 2026
 <br /> <span class="pub-links">
+  <a class="link-pill slides" href="slides/ttic-inference-time.pdf"><i class="fas fa-display"></i> Slides</a>
   <a class="link-pill code" href="https://github.com/yhkalayci/efficient_query"><i class="fab fa-github"></i> Code</a>
   <button class="link-pill summary-btn" onclick="toggleSummary('sum-adap')"><i class="fas fa-align-left"></i> Summary</button>
 </span>
