@@ -64,6 +64,28 @@ a:hover {
 	border-bottom: 1px gray dotted;
 }
 
+/* Keep publication titles blue while giving authors and venues distinct treatments. */
+ul.pub-list > li > p > br:first-of-type ~ a,
+ul.pub-list > li > p > br:first-of-type ~ b > a {
+	color: #111111;
+	transition: color 0.15s ease;
+}
+
+ul.pub-list > li > p > br:first-of-type ~ a:hover,
+ul.pub-list > li > p > br:first-of-type ~ b > a:hover,
+ul.pub-list > li > p > br:first-of-type ~ a:focus-visible,
+ul.pub-list > li > p > br:first-of-type ~ b > a:focus-visible,
+ul.pub-list > li > p > br:first-of-type ~ a:active,
+ul.pub-list > li > p > br:first-of-type ~ b > a:active {
+	color: #d04a2b;
+	border-bottom: none;
+}
+
+.pub-venue {
+	color: #79445f;
+	font-weight: 600;
+}
+
 #layout-menu a.current:link, #layout-menu a.current:visited {
 	color: #022b6d;
 	border-bottom: 1px gray solid;
