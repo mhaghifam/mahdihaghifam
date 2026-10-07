@@ -82,8 +82,16 @@ ul.pub-list > li > p > br:first-of-type ~ b > a:active {
 }
 
 .pub-venue {
-	color: #79445f;
+	color: #93465b;
+}
+
+.pub-recognition {
+	color: #8a4f72;
 	font-weight: 600;
+}
+
+.pub-note {
+	font-weight: 400;
 }
 
 #layout-menu a.current:link, #layout-menu a.current:visited {
