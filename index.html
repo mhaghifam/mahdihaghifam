@@ -196,19 +196,6 @@ Email: <a href="mailto:mhaghifam@ttic.edu">mhaghifam@ttic.edu</a> <br />
 </div>
 </li>
 
-<li><p><a href="https://arxiv.org/abs/2605.17609">Adaptive Generate-Rank-Verify in Language Models: Inference-Time Search with Costly Verification</a>
-<br /> <a href="https://viterbi-web.usc.edu/~shaddin/">S. Dughmi</a>, <b>M. Haghifam</b>, <a href="https://yhkalayci.github.io/">Y.H. Kalayci</a> (authors listed in alphabetic order)
-<br /> <span class="pub-venue">NeurIPS 2026</span>
-<br /> <span class="pub-links">
-  <button class="link-pill summary-btn" onclick="toggleSummary('sum-adap')"><i class="fas fa-align-left"></i> Summary</button>
-  <a class="link-pill slides" href="slides/ttic-inference-time.pdf"><i class="fas fa-display"></i> Slides</a>
-  <a class="link-pill code" href="https://github.com/yhkalayci/efficient_query"><i class="fab fa-github"></i> Code</a>
-</span>
-</p>
-<div id="sum-adap" class="paper-summary">
-  A common paradigm for inference-time compute is to generate many candidate responses, rank them with a cheap reward model, and pass the top-ranked ones to an expensive verifier. Since verification is often far more costly than generation and scoring, the policy faces a per-prompt compute allocation problem. We formalize this as active search: a sequential decision problem with a cheap reward-observation cost and an expensive verification cost. Our ADAP algorithm achieves a constant-factor competitive ratio against the distribution-aware optimum under a natural monotonicity assumption on the reward signal, and on HMMT math and LiveCodeBench coding it reaches 100% success rate at roughly 3x to 5x lower mean cost than the best fixed generate-and-verify policy. We also provide learning-theoretic view of this paradigm.</div>
-</li>  
-
 <li><p><a href="https://arxiv.org/abs/2610.30442">Towards Faithful Data Selection: Statistical Limits and Scalable Algorithms</a>
 <br /> <a href="https://scholar.google.com/citations?view_op=search_authors&amp;mauthors=Ahmed+Mehdi+Inane">A. M. Inane</a>*, <b>M. Haghifam*</b>, <a href="https://gkdz.org/">G. K. Dziugaite</a>, <a href="https://mitliagkas.github.io/">I. Mitliagkas</a>
 <br /> <span class="pub-venue">In submission, 2026</span>
@@ -220,6 +207,19 @@ Email: <a href="mailto:mhaghifam@ttic.edu">mhaghifam@ttic.edu</a> <br />
 <div id="sum-data-selection" class="paper-summary">
   Data selection is often formulated as finding a small subset that leads to a low population risk. In this paper, we show that, for some problems, finding such a subset may require a validation set much larger than the training set. This motivates a shift in our view of the goal of data selection: instead of minimizing population risk, the goal is to preserve the behavior of training on the full dataset. We call this <b>faithful data selection</b>. This view connects different existing methods, including CRAIG, GRAD-MATCH, TracIn-style methods, and GraNd, by relating them to different parts or approximations of a common gradient-discrepancy objective. We also propose an efficient data-selection algorithm that takes into account the covariance of the gradient vectors and has provable guarantees.
 </div>
+</li>
+
+<li><p><a href="https://arxiv.org/abs/2605.17609">Adaptive Generate-Rank-Verify in Language Models: Inference-Time Search with Costly Verification</a>
+<br /> <a href="https://viterbi-web.usc.edu/~shaddin/">S. Dughmi</a>, <b>M. Haghifam</b>, <a href="https://yhkalayci.github.io/">Y.H. Kalayci</a> (authors listed in alphabetic order)
+<br /> <span class="pub-venue">NeurIPS 2026</span>
+<br /> <span class="pub-links">
+  <button class="link-pill summary-btn" onclick="toggleSummary('sum-adap')"><i class="fas fa-align-left"></i> Summary</button>
+  <a class="link-pill slides" href="slides/ttic-inference-time.pdf"><i class="fas fa-display"></i> Slides</a>
+  <a class="link-pill code" href="https://github.com/yhkalayci/efficient_query"><i class="fab fa-github"></i> Code</a>
+</span>
+</p>
+<div id="sum-adap" class="paper-summary">
+  A common paradigm for inference-time compute is to generate many candidate responses, rank them with a cheap reward model, and pass the top-ranked ones to an expensive verifier. Since verification is often far more costly than generation and scoring, the policy faces a per-prompt compute allocation problem. We formalize this as active search: a sequential decision problem with a cheap reward-observation cost and an expensive verification cost. Our ADAP algorithm achieves a constant-factor competitive ratio against the distribution-aware optimum under a natural monotonicity assumption on the reward signal, and on HMMT math and LiveCodeBench coding it reaches 100% success rate at roughly 3x to 5x lower mean cost than the best fixed generate-and-verify policy. We also provide learning-theoretic view of this paradigm.</div>
 </li>
 
 <li><p><a href="https://arxiv.org/abs/2508.19458">The Sample Complexity of Membership Inference and Privacy Auditing</a>
