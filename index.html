@@ -160,11 +160,13 @@ Email: <a href="mailto:mhaghifam@ttic.edu">mhaghifam@ttic.edu</a> <br />
 </td></tr></table>
 <h2>About Me</h2>
 <p>
-<p> I am a machine learning researcher. Recently, I have been especially interested in problems motivated by language models, such as distillation and inference-time algorithms. My broader work spans generalization theory, as well as the design of privacy-preserving learning algorithms and the characterization of their limits.   </p>
+<p> I am a machine learning researcher interested in the foundations and algorithms of modern AI. My current research focuses broadly on large language models; see recent works on <a href="https://arxiv.org/abs/2605.22737">distillation</a> and <a href="https://arxiv.org/abs/2605.17609">test-time compute</a>. My broader work studied generalization, memorization, and privacy through the lens of information theory, seeking to understand how much information learning algorithms extract from their training data and the implications for learning and privacy. </p>
   
+<p> I am currently a <a href="https://www.ttic.edu/what-is-a-research-assistant-professor/">Research Assistant Professor</a> at <a href="https://www.ttic.edu/">TTIC</a>. In Spring 2026, I was a Research Fellow at the <a href="https://simons.berkeley.edu/">Simons Institute for the Theory of Computing</a> at UC Berkeley. Previously, I was a <a href="https://shorturl.at/kpquU">Distinguished Postdoctoral Researcher</a> at Northeastern University, working with <a href="https://jonathan-ullman.github.io/">Jonathan Ullman</a> and <a href="https://www.bu.edu/cs/profiles/adam-smith/">Adam Smith</a>. I completed my Ph.D. in Machine Learning (<a href="https://utoronto.scholaris.ca/server/api/core/bitstreams/7b9dd6fe-3d0d-4af6-b2d9-094f822523d6/content">thesis</a>) at the University of Toronto and the <a href="https://vectorinstitute.ai/">Vector Institute</a>, advised by <a href="http://danroy.org/">Daniel M. Roy</a>. Before that, I received my B.Sc. and M.Sc. from Sharif University of Technology in Tehran. </p>
+
+
 <p> Recognition of my work includes a Research Fellowship from Simons Institute (UC Berkeley), a Best Paper Award at ICML 2024, and multiple awards and scholarships from the University of Toronto for research excellence during my PhD studies. </p>
 
-<p> I am currently a <a href="https://www.ttic.edu/what-is-a-research-assistant-professor/">Research Assistant Professor</a> at <a href="https://www.ttic.edu/">TTIC</a>. In Spring 2026, I was a Research Fellow at the <a href="https://simons.berkeley.edu/">Simons Institute for the Theory of Computing</a> at UC Berkeley. Previously, I was a <a href="https://shorturl.at/kpquU">Distinguished Postdoctoral Researcher</a> at Northeastern University, working with <a href="https://jonathan-ullman.github.io/">Jonathan Ullman</a> and <a href="https://www.bu.edu/cs/profiles/adam-smith/">Adam Smith</a>. I completed my Ph.D. in Machine Learning (<a href="https://utoronto.scholaris.ca/server/api/core/bitstreams/7b9dd6fe-3d0d-4af6-b2d9-094f822523d6/content">thesis</a>) at the University of Toronto and the <a href="https://vectorinstitute.ai/">Vector Institute</a>, advised by <a href="http://danroy.org/">Daniel M. Roy</a>. Before that, I received my B.Sc. and M.Sc. from Sharif University of Technology in Tehran. </p>
 
 <p> I've worked in industry at <a href="https://deepmind.google/">Google Brain/DeepMind</a> (with <a href="http://www.thomas-steinke.net/">Thomas Steinke</a>) and at <a href="https://www.servicenow.com/research/">ServiceNow Research</a> (with <a href="https://gkdz.org/">Gintare Karolina Dziugaite</a>). <a href="#work">See details here</a>. </p>
 
@@ -179,7 +181,7 @@ Email: <a href="mailto:mhaghifam@ttic.edu">mhaghifam@ttic.edu</a> <br />
 
 <ul class="pub-list">
 
-<li><p><a href="https://arxiv.org/pdf/2605.22737">The Distillation Game in LLMs: Adaptive Evaluations &amp; Efficient Defenses</a>
+<li><p><a href="https://arxiv.org/abs/2605.22737">The Distillation Game in LLMs: Adaptive Evaluations &amp; Efficient Defenses</a>
 <br /> <a href="https://youssefallouah.com/">Y. Allouah</a>*, <b>M. Haghifam*</b>, <a href="https://www.research.google/people/rezashokri/">R. Shokri</a>, <a href="https://cs.stanford.edu/~sanmi/">S. Koyejo</a>
 <br /> <span class="pub-venue">In submission, 2026</span>
 <br /> <span class="pub-links">
@@ -191,16 +193,6 @@ Email: <a href="mailto:mhaghifam@ttic.edu">mhaghifam@ttic.edu</a> <br />
 <div id="sum-distillation" class="paper-summary">
   A distillation defense modifies a model’s answers at inference time, aiming to keep them useful to users while making them harder for a student model to learn from. Distillation defenses can look strong under standard fine-tuning, but this does not mean the released answers are hard to learn from. We show that weighted SFT—giving more weight to some of the same released answers—improves student accuracy by about 50% against antidistillation sampling on GSM8K and MATH, without extra teacher queries. This highlights the importance of data weighting for getting the most out of SFT, and shows that students can still learn from imperfect data. It also reveals a subtle issue in evaluation: poor student performance may reflect the training procedure, not the lack of useful learning signal. We model this interaction as a game between a teacher that must remain useful and a student that can adapt its training. This framework also gives Product-of-Experts, a cheaper distillation defense with similar robustness under adaptive evaluation.
 
-<li><p><a href="https://arxiv.org/abs/2610.30442">Towards Faithful Data Selection: Statistical Limits and Scalable Algorithms</a>
-<br /> <a href="https://scholar.google.com/citations?view_op=search_authors&amp;mauthors=Ahmed+Mehdi+Inane">A. M. Inane</a>*, <b>M. Haghifam*</b>, <a href="https://gkdz.org/">G. K. Dziugaite</a>, <a href="https://mitliagkas.github.io/">I. Mitliagkas</a>
-<br /> <span class="pub-venue">In submission, 2026</span>
-<br /> <span class="pub-links">
-  <button class="link-pill summary-btn" onclick="toggleSummary('sum-data-selection')"><i class="fas fa-align-left"></i> Summary</button>
-  <a class="link-pill code" href="https://github.com/Mehdi-Inane/data_selection_swap"><i class="fab fa-github"></i> Code</a>
-</span>
-</p>
-<div id="sum-data-selection" class="paper-summary">
-  Data selection is often formulated as finding a small subset that leads to a low population risk. In this paper, we show that, for some problems, finding such a subset may require a validation set much larger than the training set. This motivates a shift in our view of the goal of data selection: instead of minimizing population risk, the goal is to preserve the behavior of training on the full dataset. We call this <b>faithful data selection</b>. This view connects different existing methods, including CRAIG, GRAD-MATCH, TracIn-style methods, and GraNd, by relating them to different parts or approximations of a common gradient-discrepancy objective. We also propose an efficient data-selection algorithm that takes into account the covariance of the gradient vectors and has provable guarantees.
 </div>
 </li>
 
@@ -216,6 +208,19 @@ Email: <a href="mailto:mhaghifam@ttic.edu">mhaghifam@ttic.edu</a> <br />
 <div id="sum-adap" class="paper-summary">
   A common paradigm for inference-time compute is to generate many candidate responses, rank them with a cheap reward model, and pass the top-ranked ones to an expensive verifier. Since verification is often far more costly than generation and scoring, the policy faces a per-prompt compute allocation problem. We formalize this as active search: a sequential decision problem with a cheap reward-observation cost and an expensive verification cost. Our ADAP algorithm achieves a constant-factor competitive ratio against the distribution-aware optimum under a natural monotonicity assumption on the reward signal, and on HMMT math and LiveCodeBench coding it reaches 100% success rate at roughly 3x to 5x lower mean cost than the best fixed generate-and-verify policy. We also provide learning-theoretic view of this paradigm.</div>
 </li>  
+
+<li><p><a href="https://arxiv.org/abs/2610.30442">Towards Faithful Data Selection: Statistical Limits and Scalable Algorithms</a>
+<br /> <a href="https://scholar.google.com/citations?view_op=search_authors&amp;mauthors=Ahmed+Mehdi+Inane">A. M. Inane</a>*, <b>M. Haghifam*</b>, <a href="https://gkdz.org/">G. K. Dziugaite</a>, <a href="https://mitliagkas.github.io/">I. Mitliagkas</a>
+<br /> <span class="pub-venue">In submission, 2026</span>
+<br /> <span class="pub-links">
+  <button class="link-pill summary-btn" onclick="toggleSummary('sum-data-selection')"><i class="fas fa-align-left"></i> Summary</button>
+  <a class="link-pill code" href="https://github.com/Mehdi-Inane/data_selection_swap"><i class="fab fa-github"></i> Code</a>
+</span>
+</p>
+<div id="sum-data-selection" class="paper-summary">
+  Data selection is often formulated as finding a small subset that leads to a low population risk. In this paper, we show that, for some problems, finding such a subset may require a validation set much larger than the training set. This motivates a shift in our view of the goal of data selection: instead of minimizing population risk, the goal is to preserve the behavior of training on the full dataset. We call this <b>faithful data selection</b>. This view connects different existing methods, including CRAIG, GRAD-MATCH, TracIn-style methods, and GraNd, by relating them to different parts or approximations of a common gradient-discrepancy objective. We also propose an efficient data-selection algorithm that takes into account the covariance of the gradient vectors and has provable guarantees.
+</div>
+</li>
 
 <li><p><a href="https://arxiv.org/abs/2508.19458">The Sample Complexity of Membership Inference and Privacy Auditing</a>
 <br /> <b>M. Haghifam</b>, <a href="https://cs-people.bu.edu/ads22/">A. Smith</a>, <a href="https://jonathan-ullman.github.io/">J. Ullman</a>
