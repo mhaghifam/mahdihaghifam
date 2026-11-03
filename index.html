@@ -209,6 +209,19 @@ Email: <a href="mailto:mhaghifam@ttic.edu">mhaghifam@ttic.edu</a> <br />
 </div>
 </li>
 
+<li><p><a href="https://arxiv.org/abs/2611.03599">Should We Combine Our Data? Algorithms and Limits for Privately Assessing Data Sharing</a>
+<br /> <b>Mahdi Haghifam</b>, <a href="https://kkpatel.ttic.edu/">Kumar Kshitij Patel</a>, <a href="https://home.ttic.edu/~avrim/">Avrim Blum</a>, <a href="https://www.andrew.cmu.edu/user/gfanti/">Giulia Fanti</a>, <a href="https://sites.gatech.edu/juba-ziani/">Juba Ziani</a>
+<br /> <span class="pub-venue">In submission, 2026</span>
+<br /> <span class="pub-links">
+  <button class="link-pill summary-btn" onclick="toggleSummary('sum-valu')"><i class="fas fa-align-left"></i> Summary</button>
+</span>
+</p>
+<div id="sum-valu" class="paper-summary">
+ Data collaboration allows two agents with complementary datasets to train a better machine learning model together than either could train locally. In many applications, however, their data contain sensitive information about individuals. Consider two hospitals that want to combine their clinical records to train a lung cancer detector: one is a screening clinic seeing mostly negative cases, and the other is an oncology center seeing mostly confirmed cases. Neither hospital can train an accurate model alone, but differences in patient populations, imaging equipment, or labeling standards may mean that no single model fits their combined data. At the same time, privacy constraints prevent them from inspecting each other's patient records beforehand.
+
+In this paper, we ask how two parties can check whether pooling their sensitive data will yield an accurate model before agreeing to collaborate, without relying on a trusted third party. We formalize this problem through a learning-theoretic lens. Alice and Bob hold private labeled datasets and communicate under two-party differential privacy to test whether a single classifier from a given hypothesis class fits both datasets, or whether every classifier makes many mistakes on their pooled data. We design interactive testing algorithms and prove lower bounds for one-dimensional thresholds and high-dimensional halfspaces. Our results show when interaction allows the parties to privately verify compatibility using far less data than it takes to privately train a model, and how the privacy cost of testing without a trusted curator grows with dimension.</div>
+</li>
+
 <li><p><a href="https://arxiv.org/abs/2605.17609">Adaptive Generate-Rank-Verify in Language Models: Inference-Time Search with Costly Verification</a>
 <br /> <a href="https://viterbi-web.usc.edu/~shaddin/">Shaddin Dughmi</a>, <b>Mahdi Haghifam</b>, <a href="https://yhkalayci.github.io/">Yusuf Hakan Kalayci</a> (authors listed in alphabetic order)
 <br /> <span class="pub-venue">NeurIPS 2026</span>
